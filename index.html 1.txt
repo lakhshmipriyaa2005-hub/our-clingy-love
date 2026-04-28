@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Our Forever Story</title>
+
+<style>
+body{
+background:linear-gradient(to right,#ffd6e8,#fff0f5);
+font-family:Arial;
+text-align:center;
+padding:60px;
+}
+
+.page{
+display:none;
+}
+
+.active{
+display:block;
+}
+
+img{
+width:320px;
+border-radius:20px;
+margin:20px;
+}
+
+button{
+padding:15px 30px;
+font-size:22px;
+background:#ff4d88;
+color:white;
+border:none;
+border-radius:30px;
+margin:10px;
+cursor:pointer;
+}
+</style>
+</head>
+
+<body>
+
+<!-- PAGE 1 -->
+<div id="page1" class="page active">
+
+<h1>Page 1 💕</h1>
+
+<h2>Our School Love</h2>
+
+<p style="font-size:24px;">
+From school days,<br>
+to childhood chaos,<br>
+to becoming my favorite person ❤️
+</p>
+
+<button onclick="nextPage('page1','page2')">
+Next →
+</button>
+
+</div>
+
+
+<!-- PAGE 2 -->
+<div id="page2" class="page">
+
+<h1>Page 2 ❤️</h1>
+
+<h2>Our Love Journey</h2>
+
+<p style="font-size:24px;">
+Friendship.exe Started ✔<br>
+Memories Loaded ✔<br>
+Love Activated ✔<br>
+Forever Running ∞
+</p>
+
+<img src="photo1.jpg">
+
+<br>
+
+<button onclick="nextPage('page2','page3')">
+Next →
+</button>
+
+</div>
+
+
+<!-- PAGE 3 -->
+<div id="page3" class="page">
+
+<h1>Important Question 💍</h1>
+
+<p style="font-size:28px;">
+Do you love me forever?
+</p>
+
+<button onclick="yesAnswer()">
+YES 💕
+</button>
+
+<button id="noBtn"
+onmouseover="moveNo()">
+NO 😜
+</button>
+
+<p id="proposal"></p>
+
+<br>
+
+<button onclick="nextPage('page3','page4')">
+Final Surprise →
+</button>
+
+</div>
+
+
+<!-- PAGE 4 -->
+<div id="page4" class="page">
+
+<h1>Happy Anniversary ❤️</h1>
+
+<p style="font-size:28px;">
+You are my favorite chapter,<br>
+my safest place,<br>
+and my forever person.
+</p>
+
+<button onclick="letter()">
+Open Love Letter 💌
+</button>
+
+<p id="loveletter"></p>
+
+</div>
+
+
+
+<script>
+
+function nextPage(current,next){
+document.getElementById(current).classList.remove("active");
+document.getElementById(next).classList.add("active");
+}
+
+function yesAnswer(){
+document.getElementById("proposal").innerHTML=
+"Correct answer ✔ You're stuck with me forever ❤️";
+}
+
+function moveNo(){
+document.getElementById("noBtn").style.position="absolute";
+document.getElementById("noBtn").style.left=
+Math.random()*500+"px";
+document.getElementById("noBtn").style.top=
+Math.random()*300+"px";
+}
+
+function letter(){
+document.getElementById("loveletter").innerHTML=
+"Thank you for being my chaos, my peace and my forever. Happy Anniversary my love ❤️";
+}
+
+</script>
+
+</body>
+</html>
